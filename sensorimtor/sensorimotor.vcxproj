@@ -80,11 +80,11 @@
     <LibraryPath>$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(SolutionDir)..\..\include;C:\Users\rhrh1\AppData\Local\Programs\Python\Python37-32\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\rhrh1\AppData\Local\Programs\Python\Python37-32\libs;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)\thirdparty\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>$(SolutionDir)..\..\include;C:\Users\rhrh1\AppData\Local\Programs\Python\Python37-32\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)\thirdparty;C:\Users\rhrh1\AppData\Local\Programs\Python\Python37-32\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Users\rhrh1\AppData\Local\Programs\Python\Python37-32\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -141,7 +141,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <PreprocessorDefinitions>WITHOUT_NUMPY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
